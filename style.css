@@ -1,0 +1,230 @@
+/* Css variables */
+:root{
+  --primary:#f2ffff;
+  --border:#2900FF;
+  --dark:#0D0040;
+  --light:#7DBAFB;
+  --shadow:0 2px 7px rgba(42, 109, 253, 0.5);
+}
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body{
+  background:#fff;
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background: var(--light);
+  color: var(--dark);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+img{
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+.title{
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--light);
+  color: var(--dark);
+  padding: 20px;
+  border-bottom: 2px solid var(--border) ;
+}
+.title h1{
+  margin: auto;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.title p{
+  margin: auto;
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 15px;
+}
+
+/* Navigation */
+.main-nav ul{
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.main-nav a {
+  background:var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  /*text-transform: uppercase;*/
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--primary);
+}
+.main-nav a:hover {
+  background: var(--light);
+  border: 1px solid var(--dark);
+}
+
+/* top container */
+.top-container{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-s'
+    'showcase showcase top-box-d'
+}
+
+/* showcase */
+.showcase{
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(img/images/double2.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  box-shadow: var(--shadow);
+}
+.showcase h1{
+  font-size: 3rem;
+  margin-bottom: 0;
+  color:var(--primary);
+  text-shadow: var(--shadow);
+}
+.showcase p{
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: var(--primary);
+  text-shadow: var(--shadow);
+}
+
+.top-box{
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+.top-box h4{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.top-box .price{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.top-box-s{
+  grid-area: top-box-s;
+}
+.top-box-d{
+  grid-area: top-box-d;
+}
+
+/* boxes */
+.boxes{
+  display:grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* line separation */
+.line{
+  background: var(--light);
+  margin-top: 30px;
+}
+.line p{
+  text-align: center;
+  margin: auto;
+  font-size: 1rem;
+  color: var(--dark);
+  padding: 5px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}
+
+/* info */
+.info{
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 3%;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+.info .info-desc{
+  padding: 30px;
+}
+
+/* gallery */
+.gallery{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery img{
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+/* footer */
+footer{
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--primary);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* media queries */
+@media (max-width:800px){
+  .top-container{
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-s top-box-d';
+  }
+  .showcase h1{
+    font-size: 2rem;
+  }
+  .main-nav ul{
+    grid-template-columns: 1fr;
+  }
+  .info{
+    grid-template-columns: 1fr;
+  }
+  .info .btn{
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+@media (max-width:500px){
+  .top-container{
+    grid-template-areas:
+      'showcase'
+      'top-box-s'
+      'top-box-d';
+  }
+}
