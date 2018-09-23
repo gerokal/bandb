@@ -155,7 +155,7 @@ img{
 /* line separation */
 .line{
   background: var(--light);
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .line p{
   text-align: center;
