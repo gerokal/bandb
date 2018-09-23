@@ -14,7 +14,7 @@ html {
 
 body{
   background:#fff;
-  margin: 30px 50px;
+  margin: 30px 20px;
   line-height: 1.4;
 }
 
@@ -45,6 +45,7 @@ img{
   margin: auto;
   font-size: 4rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .title p{
   margin: auto;
@@ -200,6 +201,17 @@ footer{
 
 /* media queries */
 @media (max-width:800px){
+  body{
+    margin: 20px;
+  }
+  .title h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+  .title p{
+    font-size: 2rem;
+    text-align: center;
+  }
   .top-container{
     grid-template-areas:
       'showcase showcase'
@@ -221,6 +233,17 @@ footer{
   }
 }
 @media (max-width:500px){
+  body{
+    margin: 15px;
+  }
+  .title h1{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .title p{
+    font-size: 2rem;
+    text-align: center;
+  }
   .top-container{
     grid-template-areas:
       'showcase'
