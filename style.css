@@ -155,7 +155,7 @@ img{
 /* line separation */
 .line{
   background: var(--light);
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .line p{
   text-align: center;
@@ -174,10 +174,10 @@ img{
   display: grid;
   grid-gap: 3%;
   grid-template-columns: repeat(2, 1fr);
-  padding: 2rem;
+  padding: 1rem;
 }
 .info .info-desc{
-  padding: 30px;
+  padding: 1rem;
 }
 
 /* gallery */
